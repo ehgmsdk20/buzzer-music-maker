@@ -28,7 +28,7 @@ const Title = styled.div`
     font-weight: bold;
     font-size: 48px;
     line-height: 59px;
-`
+`;
 
 const Description = styled.div`
     font-family: Montserrat;
@@ -87,19 +87,18 @@ export default function Home() {
     return (
         <IndexPageWrapper>
             <IndexPageContainer>
-                <Title>
-                    Buzzer Music Maker
-                </Title>
+                <Title>Buzzer Music Maker</Title>
                 <Description>
                     Tempo: Tempo. Default is 120 BPM.
-                    <br/>
-                    Rhythm: How fast a single note. Default is 4 and it means quater note.
-                    <br/>
-                    '.': Rest
-                    <br/>
-                    '-': Sustain
-                    <br/>
-                    <br/>
+                    <br />
+                    Rhythm: How fast a single note. Default is 4 and it means
+                    quater note.
+                    <br />
+                    {"'.': Rest"}
+                    <br />
+                    {"'-': Sustain"}
+                    <br />
+                    <br />
                     Press sample button to see how to use!
                 </Description>
                 <Button
