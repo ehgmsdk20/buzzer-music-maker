@@ -21,7 +21,23 @@ const IndexPageContainer = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+const Title = styled.div`
+    margin: 32px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+`
+
+const Description = styled.div`
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+`;
 const InputContainer = styled.div`
+    margin-top: 32px;
     display: flex;
     gap: 64px;
     justify-content: center;
@@ -71,6 +87,21 @@ export default function Home() {
     return (
         <IndexPageWrapper>
             <IndexPageContainer>
+                <Title>
+                    Buzzer Music Maker
+                </Title>
+                <Description>
+                    Tempo: Tempo. Default is 120 BPM.
+                    <br/>
+                    Rhythm: How fast a single note. Default is 4 and it means quater note.
+                    <br/>
+                    '.': Rest
+                    <br/>
+                    '-': Sustain
+                    <br/>
+                    <br/>
+                    Press sample button to see how to use!
+                </Description>
                 <Button
                     onClick={() => {
                         setNotes(
@@ -79,13 +110,12 @@ export default function Home() {
                         setBPM(150);
                         setRhythm(16);
                     }}
-                    style={{ alignSelf: 'end' }}
                 >
                     <ButtonContent>Sample</ButtonContent>
                 </Button>
                 <InputContainer>
                     <InputWrapper>
-                        <div>BPM:</div>
+                        <div>Tempo:</div>
                         <Input value={bpm} setValue={setBPM} />
                     </InputWrapper>
                     <InputWrapper>
