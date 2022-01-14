@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const AddressInputWrapper = styled.div`
     display: flex;
@@ -11,15 +11,16 @@ const StyledInput = styled.input`
     padding-left: 16px;
     width: 100px;
     min-height: 48px;
-    background: #FFFFFF;
-    border: 1px solid #E1E1E1;
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
     box-sizing: border-box;
     border-radius: 8px;
     font-family: Montserrat;
     font-weight: normal;
     font-size: 14px;
     line-height: 32px;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
         border: 1px solid #000000;
     }
 `;
@@ -36,8 +37,7 @@ const Input = (props) => {
                 value={value}
             />
         </AddressInputWrapper>
-
-    )
-}
+    );
+};
 
 export default Input;

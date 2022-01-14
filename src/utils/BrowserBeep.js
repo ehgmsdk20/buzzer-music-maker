@@ -31,7 +31,6 @@ class Sound {
             currentTime + duration
         );
 
-
         this.oscillator.start(currentTime);
         this.oscillator.stop(currentTime + duration);
     }

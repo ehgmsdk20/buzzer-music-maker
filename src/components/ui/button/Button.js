@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledButton = styled.button`
     all: unset;
@@ -13,20 +13,17 @@ const StyledButton = styled.button`
     border: 1px solid #000000;
     box-sizing: border-box;
     &.white {
-        background: #FFFFFF;
+        background: #ffffff;
     }
 `;
 
 const Button = (props) => {
-    const { children, onClick, className } = props;
+    const { children, onClick, style } = props;
     return (
-        <StyledButton 
-            onClick={onClick}
-            className={className}
-        >
+        <StyledButton onClick={onClick} style={style}>
             {children}
         </StyledButton>
-    )
-}
+    );
+};
 
 export default Button;
