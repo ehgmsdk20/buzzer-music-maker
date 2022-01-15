@@ -51,7 +51,7 @@ const InputWrapper = styled.div`
     align-items: center;
 `;
 const PianoContainer = styled.div`
-    width: 1600px;
+    width: 1200px;
 `;
 
 const ButtonContent = styled.div`
@@ -66,15 +66,15 @@ export default function Home() {
     const [notes, setNotes] = useState('');
     const [bpm, setBPM] = useState(120);
     const [rhythm, setRhythm] = useState(4);
-    const NOTES = constants.OCTAVE_NUMBERS.reduce((notes, octaveNumber) => {
+    const NOTES = [3, 4, 5].reduce((notes, octaveNumber) => {
         const notesInOctave = constants.TONES.map(
             (tone) => `${tone}${octaveNumber}`
         );
         return [...notes, ...notesInOctave];
     }, []);
 
-    const firstNote = MidiNumbers.fromNote('c1');
-    const lastNote = MidiNumbers.fromNote('b7');
+    const firstNote = MidiNumbers.fromNote('c3');
+    const lastNote = MidiNumbers.fromNote('b5');
     const keyboardShortcuts = NOTES.map((note) => {
         return {
             midiNumber: MidiNumbers.fromNote(note),
@@ -143,7 +143,7 @@ export default function Home() {
                         stopNote={(midiNumber) => {
                             // Stop playing a given note - see notes below
                         }}
-                        width={1600}
+                        width={1200}
                         keyboardShortcuts={keyboardShortcuts}
                     />
                 </PianoContainer>
