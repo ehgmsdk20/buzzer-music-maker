@@ -41,7 +41,7 @@ const NoteInput = (props) => {
     const interval = 60 / (bpm * (rhythm / 4));
 
     const playMusic = (notes) => {
-        const score = notes.split(/(?=[1-7])/);
+        const score = notes.replaceAll(' ','').split(/(?=[1-7])/);
         let music = new Array();
         for (let i = 0; i < score.length; i++) {
             if (score[i].length === 2) {
